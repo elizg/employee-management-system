@@ -62,38 +62,13 @@ public class EmsRunner {
 
 	// method to read menu input
 	public static int getMenuInput() {
-
+		
+		// TODO ask about duplicate scanner object
 		int input;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your selection: ");
 		input = sc.nextInt();
 		return input;
 	}
-
-	private static void viewDept() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private static void listEmp() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private static void removeEmp() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private static void updateEmp() {
-		// TODO Auto-generated method stub
-
-	}
-	private static void addEmp() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
 
 }

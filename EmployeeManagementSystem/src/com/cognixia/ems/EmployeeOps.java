@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class EmployeeOps {
 
-	// use list interface w/ arrlist
-	// make empops obj to reference its own arr list
+	// use list interface w/ arraylist
+	// make EmployeeOps object to reference its own arraylist
 	private static List<Employee> empInfo = new ArrayList<Employee>();
 	
 	// in progress
@@ -22,7 +22,7 @@ public class EmployeeOps {
 		System.out.println("Enter Employee's Last Name: ");
 		String lastName = sc.nextLine();
 		
-		// grab dept list from dept ops and give choices give by dept id
+		// grab dept list from DepartmentOps and set up the choices for user by dept id
 		System.out.println("Enter Employee's Department: ");
 		String department = sc.nextLine();
 		
@@ -36,7 +36,7 @@ public class EmployeeOps {
 		String email = sc.nextLine();
 		
 		Employee emp1 = new Employee(firstName, lastName, department, jobTitle, salary, email);
-		// pass in params
+		// pass in the info for each empoloyee
 		empInfo.add(emp1);
 		
 	}
@@ -49,13 +49,13 @@ public class EmployeeOps {
 
 	}
 	
-	// ask for id and remove, find emp index 
-	// ie how to remove obj from arrlist
+	// ask for id and remove it, find emp index 
+	// ie look up how to remove obj from arraylist
 	private static void removeEmp() {
 
 	}
 
-	// loop thru and print emps
+	// loop through and print emps
 	private static void listEmp() {
 
 	}

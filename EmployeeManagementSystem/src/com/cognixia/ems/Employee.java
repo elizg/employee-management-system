@@ -13,11 +13,12 @@ public class Employee {
 	private int salary;
 	private String email;
 	private static int counter = 1;
+	// start empId at 1
 	
 	// constructor
 	public Employee(String firstName, String lastName, String department, String jobTitle, int salary, String email) {
 		super();
-		this.empId = counter++; // setting up var to auto-increment
+		this.empId = counter++; // setting up empId to assign auto-incremented id by 1
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.department = department;
@@ -27,6 +28,7 @@ public class Employee {
 	}
 
 	// getters setters
+	// we don't need the setEmpId because the counter is incrementing and creating it
 	public int getEmpId() {
 		return empId;
 	}
@@ -85,28 +87,4 @@ public class Employee {
 				+ department + ", jobTitle=" + jobTitle + ", salary=" + salary + ", email=" + email + "]";
 	}
 
-/*
- * 
-	public void addEmp() {
-
-		Employee employee = new Employee(empId, department, department, department, department, empId, department);
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Employee's ID Number: ");
-		employee.setEmpId(sc.nextInt());
-		System.out.println("Enter Employee's First Name: ");
-		employee.setFirstName(sc.nextLine());
-		System.out.println("Enter Employee's Last Name: ");
-		employee.setLastName(sc.nextLine());
-		System.out.println("Enter Employee's Department: ");
-		employee.setDepartment(sc.nextLine());
-		System.out.println("Enter Employee's Job Title: ");
-		employee.setJobTitle(sc.nextLine());
-		System.out.println("Enter Employee's Salary: ");
-		employee.setSalary(sc.nextInt());
-		System.out.println("Enter Employee's Email: ");
-		employee.setEmail(sc.nextLine());
-
-	} */
-	
 }
