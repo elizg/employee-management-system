@@ -1,7 +1,10 @@
 package com.cognixia.ems;
 
+import java.util.Scanner;
+
 public class Employee {
 
+	// private variables only available in this class, for data hiding
 	private int empId;
 	private String firstName;
 	private String lastName;
@@ -9,11 +12,12 @@ public class Employee {
 	private String jobTitle;
 	private int salary;
 	private String email;
+	private static int counter = 1;
 	
 	// constructor
-	public Employee(int empId, String firstName, String lastName, String department, String jobTitle, int salary, String email) {
+	public Employee(String firstName, String lastName, String department, String jobTitle, int salary, String email) {
 		super();
-		this.empId = empId;
+		this.empId = counter++; // setting up var to auto-increment
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.department = department;
@@ -25,10 +29,6 @@ public class Employee {
 	// getters setters
 	public int getEmpId() {
 		return empId;
-	}
-
-	public void setEmpId(int empId) {
-		this.empId = empId;
 	}
 
 	public String getFirstName() {
@@ -85,5 +85,28 @@ public class Employee {
 				+ department + ", jobTitle=" + jobTitle + ", salary=" + salary + ", email=" + email + "]";
 	}
 
+/*
+ * 
+	public void addEmp() {
+
+		Employee employee = new Employee(empId, department, department, department, department, empId, department);
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Employee's ID Number: ");
+		employee.setEmpId(sc.nextInt());
+		System.out.println("Enter Employee's First Name: ");
+		employee.setFirstName(sc.nextLine());
+		System.out.println("Enter Employee's Last Name: ");
+		employee.setLastName(sc.nextLine());
+		System.out.println("Enter Employee's Department: ");
+		employee.setDepartment(sc.nextLine());
+		System.out.println("Enter Employee's Job Title: ");
+		employee.setJobTitle(sc.nextLine());
+		System.out.println("Enter Employee's Salary: ");
+		employee.setSalary(sc.nextInt());
+		System.out.println("Enter Employee's Email: ");
+		employee.setEmail(sc.nextLine());
+
+	} */
 	
 }

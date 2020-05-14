@@ -4,21 +4,20 @@ public class Department {
 	
 	private int deptId;
 	private int deptName;
+	private String phoneNum;
+	private static int counter = 1;
 	
 	// constructor
-	public Department(int deptId, int deptName) {
+	public Department(int deptName, String phoneNum) {
 		super();
-		this.deptId = deptId;
+		this.deptId = counter++;
 		this.deptName = deptName;
+		this.setPhoneNum(phoneNum);
 	}
 
 	// getters setters
 	public int getDeptId() {
 		return deptId;
-	}
-
-	public void setDeptId(int deptId) {
-		this.deptId = deptId;
 	}
 
 	public int getDeptName() {
@@ -29,9 +28,17 @@ public class Department {
 		this.deptName = deptName;
 	}
 
+	public String getPhoneNum() {
+		return phoneNum;
+	}
+
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
+
 	@Override
 	public String toString() {
-		return "Department [deptId=" + deptId + ", deptName=" + deptName + "]";
+		return "Department [deptId=" + deptId + ", deptName=" + deptName + ", phoneNum=" + phoneNum + "]";
 	}
 	
 }
