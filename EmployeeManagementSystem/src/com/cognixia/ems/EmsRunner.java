@@ -8,6 +8,8 @@ public class EmsRunner {
 
 	public static void main(String[] args) {
 
+		// TODO reformat initial menu architecture to have three choices: Employee, Department, Exit
+		// Then add the separate Employee and Department menus
 		// put in try catch block
 		int input = 0;
 		

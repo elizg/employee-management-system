@@ -22,7 +22,8 @@ public class EmployeeOps {
 		System.out.println("Enter Employee's First Name: ");
 		String firstName = sc.nextLine();
 
-		sc.nextLine();
+		sc.nextLine(); // had to add this in to prevent input lines with different data types from
+						// printing simultaneously, if you know a better solution, let me know
 
 		System.out.println("Enter Employee's Last Name: ");
 		String lastName = sc.nextLine();
@@ -39,7 +40,6 @@ public class EmployeeOps {
 
 		System.out.println("Enter Employee's Email: ");
 		String email = sc.nextLine();
-
 		sc.nextLine();
 
 		Employee emp1 = new Employee(firstName, lastName, department, jobTitle, salary, email);
@@ -53,14 +53,42 @@ public class EmployeeOps {
 
 	}
 
+	
+	
+	// TODO complete updateEmp()
 	// select emp based on id
 	// ask user to give emp id
 	// get emp,
 	// ask for list of what to update, update w/ setter
 	public static void updateEmp() {
+		Scanner sc = ReadFromConsole.sc;
+		System.out.println("Enter Employee Id to update: ");
+		int empId = sc.nextInt();
 
+		sc.hasNextLine();
+
+		for (Employee emp : empInfo) {
+			if (emp.getEmpId() == empId) {
+				System.out.println(empId);
+				System.out.println("Select a field to update for employee :" + empId);
+				// TODO complete method
+				// create selection menu
+				// use the scanner to read the input
+				// switch case for selections  
+				// 1 - string firstname =  read the first name sc.getLine()
+				//     emp.setFirstName(firstname)
+				// break
+				// 2  - string lastname - read
+				//     emp.setLastname(lastname)
+				
+			}
+		}
 	}
 
+	
+	
+	
+	
 	// ask for id and remove it, find emp index
 	// ie look up how to remove obj from arraylist
 	public static void removeEmp() {
@@ -72,6 +100,7 @@ public class EmployeeOps {
 		sc.nextLine();
 
 		// loop thru all employee obj of the empInfo list
+		// TODO ask if this is the best way to delete
 		for (Employee emp : empInfo) {
 			if (emp.getEmpId() == empId) {
 				deletion = true;
@@ -84,6 +113,10 @@ public class EmployeeOps {
 		}
 	}
 
+	
+	
+	
+	
 	// loop through and print emps
 	public static void listEmp() {
 		// loop thru all employee obj of the empInfo list
@@ -93,7 +126,7 @@ public class EmployeeOps {
 	}
 
 	public static void viewDept() {
-
+		// TODO create separate Department menu
 	}
 
 }
