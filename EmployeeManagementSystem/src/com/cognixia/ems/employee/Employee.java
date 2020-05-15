@@ -1,4 +1,4 @@
-package com.cognixia.ems;
+package com.cognixia.ems.employee;
 
 import java.util.Scanner;
 

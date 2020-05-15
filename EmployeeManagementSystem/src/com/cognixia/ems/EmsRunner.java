@@ -2,10 +2,13 @@ package com.cognixia.ems;
 
 import java.util.Scanner;
 
+import com.cognixia.ems.employee.EmployeeOps;
+
 public class EmsRunner {
 
 	public static void main(String[] args) {
 
+		// put in try catch block
 		int input = 0;
 		
 		do {
@@ -20,23 +23,23 @@ public class EmsRunner {
 
 			{
 			case 1:
-				addEmp();
+				EmployeeOps.addEmp();
 				break;
 
 			case 2:
-				updateEmp();
+				EmployeeOps.updateEmp();
 				break;
 
 			case 3:
-				removeEmp();
+				EmployeeOps.removeEmp();
 				break;
 
 			case 4:
-				listEmp();
+				EmployeeOps.listEmp();
 				break;
 
 			case 5:
-				viewDept();
+				EmployeeOps.viewDept();
 				break;
 			default:
 				System.out.println("Input error!");
@@ -65,7 +68,8 @@ public class EmsRunner {
 		
 		// TODO ask about duplicate scanner object
 		int input;
-		Scanner sc = new Scanner(System.in);
+		// using the already created scanner object from Read From Console class
+		Scanner sc = ReadFromConsole.sc;
 		System.out.println("Enter your selection: ");
 		input = sc.nextInt();
 		return input;
