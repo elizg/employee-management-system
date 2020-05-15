@@ -121,7 +121,7 @@ public class EmployeeOps {
 	public static void listEmp() {
 		// loop thru all employee obj of the empInfo list
 		for (Employee emp : empInfo) {
-			System.out.println(emp.getEmpId() + emp.getEmail());
+			System.out.println(emp.getEmpId() + emp.getFirstName() + emp.getLastName() + emp.getDepartment() + emp.getJobTitle() + emp.getSalary() + emp.getEmail());
 		}
 	}
 
