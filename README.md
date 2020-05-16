@@ -1,8 +1,8 @@
 # employee-management-system
 Employee Management System (EMS) software created with Java tested with JUnit
 
-Problem Statement: 
-You need to create an Employee Management System (EMS) for a company
+Problem Statement:  
+Create an Employee Management System (EMS) for a company
 The EMS should be able to: 
 - Add new Employees 
 - Update Employee information
@@ -10,7 +10,7 @@ The EMS should be able to:
 - List Employee information 
 
 The EMS should also be able to keep track of all the departments in the company and which employees are within them. 
-As with Employees, Departments should also be able to:
+As with Employees, the EMS should also be able to:
 - Add new Departments
 - Update Department information
 - Remove Departments
