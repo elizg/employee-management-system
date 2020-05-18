@@ -10,9 +10,10 @@ import com.cognixia.ems.ReadFromConsole;
 
 public class DepartmentOps {
 	
-	// static methods can only access static objects
+	// static bc static methods can only access static objects
 	private static List<Department> deptInfo = new ArrayList<Department>();
 
+	// static methods belong to the class
 	public static void addDept() {
 		Scanner sc = ReadFromConsole.sc;
 
@@ -44,12 +45,27 @@ public class DepartmentOps {
 		// update it
 	}
 	
+	// ask for dept id and remove it, find dept index
 	public static void removeDept() {
-		// ask which dept by id
-		// loop thru, find, return
-		// delete it with boolean, TODO review 'concurrent modification exception'
-	}
+		Scanner sc = ReadFromConsole.sc;
+		System.out.println("Enter Department Id: ");
+		int deptId = sc.nextInt();
+		boolean deletion = false;
+		Department d = null;
+		sc.nextLine();
 
+		// loop thru all dept obj of the deptInfo list
+		for (Department dept : deptInfo) {
+			if (dept.getDeptId() == deptId) {
+				deletion = true;
+				d = dept;
+			}
+		}
+		if (deletion) {
+			deptInfo.remove(d);
+			System.out.println("Department removed");
+		}
+	}
 	
 	// loop through and print dept info
 	public static void listDept() {
