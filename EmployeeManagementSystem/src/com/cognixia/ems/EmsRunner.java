@@ -2,6 +2,7 @@ package com.cognixia.ems;
 
 import java.util.Scanner;
 
+import com.cognixia.ems.department.DepartmentOps;
 import com.cognixia.ems.employee.EmployeeOps;
 
 public class EmsRunner {
@@ -10,12 +11,48 @@ public class EmsRunner {
 
 		// TODO reformat initial menu architecture to have three choices: Employee, Department, Exit
 		// Then add the separate Employee and Department menus
-		// put in try catch block
+
 		int input = 0;
 		
 		do {
 			// print menu
 			menuInput();
+
+			// get menu option
+			input = getMenuInput();
+
+			// using a switch to direct user input selections 1-5
+			switch (input)
+
+			{
+			case 1:
+				getEmpMenu();
+				break;
+
+			case 2:
+				getDeptMenu();
+				break;
+
+			case 3:
+				System.exit(0);
+				break;
+				
+			// removed while <4 because default 
+			default:
+				System.out.println("Input error!");
+				break;
+			}
+
+		} while (true);
+	}
+	
+	static void getEmpMenu() {
+		
+		int input = 0;
+		
+		do {
+			// print menu
+			empMenuInput();
 
 			// get menu option
 			input = getMenuInput();
@@ -39,30 +76,84 @@ public class EmsRunner {
 			case 4:
 				EmployeeOps.listEmp();
 				break;
-
+				
 			case 5:
-				EmployeeOps.viewDept();
-				break;
+				return;
+
 			default:
 				System.out.println("Input error!");
 				break;
 			}
 
-		} while (input < 6);
+		} while (true);
 	}
 
+	static void getDeptMenu() {
+		
+	int input = 0;
+	
+	do {
+		// print menu
+		deptMenuInput();
 
+		// get menu option
+		input = getMenuInput();
+
+		// using a switch to direct user input selections 1-5
+		switch (input)
+
+		{
+		case 1:
+			DepartmentOps.addDept();
+			break;
+
+		case 2:
+			DepartmentOps.updateDept();
+			break;
+
+		case 3:
+			DepartmentOps.removeDept();
+			break;
+
+		case 4:
+			DepartmentOps.listDept();
+			break;
+			
+		case 5: 
+			return;
+
+		default:
+			System.out.println("Input error!");
+			break;
+		}
+
+	} while (true);
+}
 
 	public static void menuInput() {
 
-		// initially add emp, dept, exit
-		// switch case case 1, emp menu, dept
 		System.out.println("Welcome to the EMS, you have the following options:\n" 
+				+ "1 - View Employee Menu\n"
+				+ "2 - View Department Menu\n" 
+				+ "3 - Exit\n");
+	}
+	
+	public static void empMenuInput() {
+		System.out.println("EMS Employee Menu:\n" 
 				+ "1 - Add New Employee\n"
 				+ "2 - Update Employee Information\n" 
 				+ "3 - Remove Employee\n" 
 				+ "4 - List Employee Information\n"
-				+ "5 - View Department Menu\n");
+				+ "5 - Exit\n");
+	}
+	
+	public static void deptMenuInput() {
+		System.out.println("EMS Department Menu:\n" 
+				+ "1 - Add New Department\n"
+				+ "2 - Update Department Information\n" 
+				+ "3 - Remove Department\n" 
+				+ "4 - List Department Information\n"
+				+ "5 - Exit\n");
 	}
 
 	// method to read menu input

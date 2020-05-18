@@ -1,7 +1,5 @@
 package com.cognixia.ems.employee;
 
-import java.util.Scanner;
-
 public class Employee {
 
 	// private variables only available in this class, for data hiding

@@ -3,16 +3,16 @@ package com.cognixia.ems.department;
 public class Department {
 	
 	private int deptId;
-	private int deptName;
-	private String phoneNum;
+	private String deptName;
+	private String deptPhoneNum;
 	private static int counter = 1;
 	
 	// constructor
-	public Department(int deptName, String phoneNum) {
+	public Department(String deptName, String deptPhoneNum) {
 		super();
 		this.deptId = counter++;
 		this.deptName = deptName;
-		this.setPhoneNum(phoneNum);
+		this.setDeptPhoneNum(deptPhoneNum);
 	}
 
 	// getters setters
@@ -20,25 +20,25 @@ public class Department {
 		return deptId;
 	}
 
-	public int getDeptName() {
+	public String getDeptName() {
 		return deptName;
 	}
 
-	public void setDeptName(int deptName) {
+	public void setDeptName(String deptName) {
 		this.deptName = deptName;
 	}
 
-	public String getPhoneNum() {
-		return phoneNum;
+	public String getDeptPhoneNum() {
+		return deptPhoneNum;
 	}
 
-	public void setPhoneNum(String phoneNum) {
-		this.phoneNum = phoneNum;
+	public void setDeptPhoneNum(String deptPhoneNum) {
+		this.deptPhoneNum = deptPhoneNum;
 	}
 
 	@Override
 	public String toString() {
-		return "Department [deptId=" + deptId + ", deptName=" + deptName + ", phoneNum=" + phoneNum + "]";
+		return "Department deptId=" + deptId + ", deptName=" + deptName + ", phoneNum=" + deptPhoneNum + "]";
 	}
 	
 }
