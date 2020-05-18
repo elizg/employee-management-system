@@ -9,9 +9,6 @@ public class EmsRunner {
 
 	public static void main(String[] args) {
 
-		// TODO reformat initial menu architecture to have three choices: Employee, Department, Exit
-		// Then add the separate Employee and Department menus
-
 		int input = 0;
 		
 		do {
@@ -21,7 +18,7 @@ public class EmsRunner {
 			// get menu option
 			input = getMenuInput();
 
-			// using a switch to direct user input selections 1-5
+			// using a switch to direct user input selection to 1-3 only
 			switch (input)
 
 			{
@@ -37,7 +34,7 @@ public class EmsRunner {
 				System.exit(0);
 				break;
 				
-			// removed while <4 because default 
+			// removed while < because have default to redirect
 			default:
 				System.out.println("Input error!");
 				break;
@@ -159,13 +156,17 @@ public class EmsRunner {
 	// method to read menu input
 	public static int getMenuInput() {
 		
-		// TODO ask about duplicate scanner object
 		int input;
+		
 		// using the already created scanner object from Read From Console class
 		Scanner sc = ReadFromConsole.sc;
+		
 		System.out.println("Enter your selection: ");
 		input = sc.nextInt();
+		System.out.println();
+		
 		return input;
+
 	}
 
 }

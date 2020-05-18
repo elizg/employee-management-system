@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.cognixia.ems.ReadFromConsole;
-import com.cognixia.ems.employee.Employee;
 
 // check that we're not getting the same dept twice when updating new dept
 
