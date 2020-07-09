@@ -13,9 +13,6 @@ public class EmployeeOps {
 	private static List<Employee> empInfo = new ArrayList<Employee>();
 	// you could also make it a hashmap
 
-	// in progress
-	// TODO we need to add methods here
-
 	public static void addEmp() {
 		Scanner sc = ReadFromConsole.sc;
 
@@ -120,5 +117,4 @@ public class EmployeeOps {
 			System.out.println(emp.getEmpId() + emp.getFirstName() + emp.getLastName() + emp.getDepartment() + emp.getJobTitle() + emp.getSalary() + emp.getEmail());
 		}
 	}
-
 }
